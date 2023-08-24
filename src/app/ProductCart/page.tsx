@@ -10,7 +10,6 @@ import { cartTable } from '@/lib/drizzle'
 import CartItems from '@/components/CartItems'
 import OrderSummary from '@/components/OrderSummary'
 import Link from 'next/link'
-import { getStripe } from '@/lib/strip'
 import { Button } from '@/components/ui/button'
 import { cookies } from 'next/headers'
 import CartSummary from '@/components/CartSummary'
@@ -23,7 +22,7 @@ const pool = new Pool({
 
 const db = drizzle(pool as VercelPool);
 
-export const getProducts = async ()=> {
+const getProducts = async ()=> {
   //const res = await client.fetch('*[_type=="product"]{_id,price,pname,category,"image":image[].asset->url}')
   // const res = await fetch('http://localhost:3000/api/cart?user_id=${cookies().get("user_id")?.value}')
   const uid = cookies().get("user_id")?.value;

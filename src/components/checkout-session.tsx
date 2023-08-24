@@ -34,3 +34,5 @@ export function CheckoutSession() {
     </>
   )
 }
+
+export default CheckoutSession
