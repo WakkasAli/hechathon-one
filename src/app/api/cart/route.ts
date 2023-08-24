@@ -23,7 +23,7 @@ export const GET = async(request: Request) =>{
 }
 
 export const POST = async(request: Request)=>{
-
+    try{
     console.log("Cart POST Hit")
     const req= await request.json();
 
@@ -36,7 +36,7 @@ export const POST = async(request: Request)=>{
         setCookies.set("user_id", uid);
     }
 
-    try{
+    
         const res = await db.insert(cartTable).values({
             product_id: req.product_id,
             quantity:req.quantity,
