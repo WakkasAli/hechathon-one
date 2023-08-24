@@ -23,8 +23,8 @@ export const POST = async (request:Request) => {
             shipping_rate:"shr_1NW2J3L0iWxuD9W8Vhua2D4h"
         }],
         billing_address_collection:"auto",
-        success_url:`http://localhost:3000/success?session_id={CHECKOUT_SESSION_ID}`,
-        cancel_url:`http://localhost:3000/cart`
+        success_url:`https://hechathon-npugz2140-wakkasali.vercel.app/success?session_id={CHECKOUT_SESSION_ID}`,
+        cancel_url:`https://hechathon-npugz2140-wakkasali.vercel.app/cart`
     })
     
     //console.log("Session: ", session)
