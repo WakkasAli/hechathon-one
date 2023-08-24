@@ -11,7 +11,7 @@ const checkout = async ({params}:any) =>{
 
   async function oncheckout() {
         
-    const response = await  fetch(`http://localhost:3000/api/checkout`,{
+    const response = await  fetch(`https://hechathon-npugz2140-wakkasali.vercel.app/api/checkout`,{
     method:"POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({

@@ -10,7 +10,7 @@ const AddtoCartbutton:FC<{item: any}>=({item})=>{
 
     const handleAddToCart= async ()=> {
                 
-        const res = fetch("/api/cart", {
+        const res = fetch("https://hechathon-npugz2140-wakkasali.vercel.app/api/cart", {
             method:"POST",
             cache: 'no-store',
             body:JSON.stringify({
