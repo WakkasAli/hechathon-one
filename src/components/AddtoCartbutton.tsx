@@ -9,7 +9,7 @@ import ProductQuantity from "./ProductQuantity";
 const AddtoCartbutton:FC<{item: any}>=({item})=>{
 
     const handleAddToCart= async ()=> {
-                
+                try{
         const res = fetch("/api/cart", {
             method:"POST",
             cache: 'no-store',
@@ -20,7 +20,12 @@ const AddtoCartbutton:FC<{item: any}>=({item})=>{
         })
 
         const result = await (await res).json()
+
         console.log(result);    
+    }
+    catch(error){
+        console.log(error)
+    }
     }
 
     return(
