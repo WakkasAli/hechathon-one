@@ -14,7 +14,7 @@ const CartSummary:FC<{item: any}>=({item})=>{
         console.log("Cart Summary Page: ");
         const stripe = await getStripe();
         alert("Entered"+stripe)
-        const response = await  fetch(`https://hechathon-npugz2140-wakkasali.vercel.app/api/checkout`,{
+        const response = await  fetch(`/api/checkout`,{
         method:"POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
