@@ -26,7 +26,7 @@ const getProducts = async ()=> {
   //const res = await client.fetch('*[_type=="product"]{_id,price,pname,category,"image":image[].asset->url}')
   // const res = await fetch('http://localhost:3000/api/cart?user_id=${cookies().get("user_id")?.value}')
   const uid = cookies().get("user_id")?.value;
-  
+  console.log(uid);
   const res = await db.select().from(cartTable).where(eq(cartTable.user_id, uid as string));
   console.log(res)
   return res
